@@ -84,7 +84,7 @@ public class TaskService {
         
         // Dividir por objetos JSON (procurar por padrão "}, {")
         // Isso é simplificado - você pode precisar de uma abordagem mais robusta
-        String[] taskStrings = json.split("\\},\\s*\\{");
+        String[] taskStrings = json.split("},\\s*\\{");
         
         for (String taskStr : taskStrings) {
             // Limpar chaves se necessário
