@@ -1,5 +1,7 @@
 package app;
 
+import services.TaskService;
+
 public class TaskCli {
     public static void main(String[] args) {
         if (args.length == 0) {
@@ -25,7 +27,8 @@ public class TaskCli {
                 }
                 String descricao = args[1];
                 System.out.println("Adicionando: " + descricao);
-                // Implementar lógica
+                TaskService taskService = new TaskService();
+                taskService.addTask(descricao);
                 break;
                 
             case "update":
